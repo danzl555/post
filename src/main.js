@@ -1,5 +1,6 @@
 import PostList from './components/PostList.js';
 import Search from './components/Search.js';
+import './style.css';
 
 class App {
   constructor() {

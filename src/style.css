@@ -1,0 +1,18 @@
+/* Стили для строки поиска */
+input[type="text"] {
+    width: 500px;
+    height: 100px;
+    font-size: 16px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-weight: 900;
+  }
+  
+  /* Стили для контейнера постов */
+  #app {
+    margin: 20px;
+  }
+  
