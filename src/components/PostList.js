@@ -1,16 +1,22 @@
 import Post from './Post.js';
 
 class PostList {
-  constructor() {
-    this.container = document.getElementById('app');
+  constructor(onDelete, rootElement) {
+    this.onDelete = onDelete; 
+    this.rootElement = rootElement; 
   }
 
   render(posts) {
-    this.container.innerHTML = '';
+    const postListElement = document.createElement('div');
+    postListElement.classList.add('post-list'); 
+
     posts.forEach(post => {
-      const postComponent = new Post(post);
-      this.container.appendChild(postComponent.render());
+      const postComponent = new Post(post, this.onDelete);
+      postListElement.appendChild(postComponent.render());
     });
+
+    this.rootElement.querySelector('.post-list')?.remove();
+    this.rootElement.appendChild(postListElement);
   }
 }
 
